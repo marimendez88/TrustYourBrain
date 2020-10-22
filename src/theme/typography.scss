@@ -1,0 +1,193 @@
+// Atoms Texts
+h1 {
+    &.size-l {
+        font-size: 60px;
+    }
+    &.size-m {
+        font-size: 50px;
+    }
+    &.size-s {
+        font-size: 40px;
+    }
+    &.size-xs {
+        font-size: 30px;
+    }
+    &.left {
+        text-align: left;
+    }
+    &.center {
+        text-align: center;
+    }
+    &.purple {
+        color: var(--ion-color-primary-medium);
+    }
+    &.white {
+        color: var(--ion-color-white);
+    }
+    &.bold {
+        font-weight: 700;
+    }
+    &.semibold {
+        font-weight: 600;
+    }
+}
+
+h2 {
+    font-size: 32px;
+    &.dark-purple {
+        color: var(--ion-color-primary-dark);
+    }
+    &.purple {
+        color: var(--ion-color-primary-medium);
+    }
+    &.white {
+        color: var(--ion-color-white);
+    }
+    &.left {
+        text-align: left;
+    }
+    &.center {
+        text-align: center;
+    }
+    &.bold {
+        font-weight: 700;
+    }
+    &.semibold {
+        font-weight: 600;
+    }
+}
+
+h3 {
+    font-size: 26px;
+    &.dark-purple {
+        color: var(--ion-color-primary-dark);
+    }
+    &.purple {
+        color: var(--ion-color-primary-medium);
+    }
+    &.light-purple {
+        color: var(--ion-color-primary-light);
+    }
+    &.white {
+        color: var(--ion-color-white);
+    }
+    &.left {
+        text-align: left;
+    }
+    &.center {
+        text-align: center;
+    }
+    &.bold {
+        font-weight: 700;
+    }
+    &.semibold {
+        font-weight: 600;
+    }
+}
+
+h4 {
+    font-size: 26px;
+    &.dark-purple {
+        color: var(--ion-color-primary-dark);
+    }
+    &.purple {
+        color: var(--ion-color-primary-medium);
+    }
+    &.white {
+        color: var(--ion-color-white);
+    }
+    &.left {
+        text-align: left;
+    }
+    &.center {
+        text-align: center;
+    }
+    &.bold {
+        font-weight: 700;
+    }
+    &.semibold {
+        font-weight: 600;
+    }
+}
+
+h5 {
+    font-size: 20px;
+    &.dark-purple {
+        color: var(--ion-color-primary-dark);
+    }
+    &.purple {
+        color: var(--ion-color-primary-medium);
+    }
+    &.white {
+        color: var(--ion-color-white);
+    }
+    &.left {
+        text-align: left;
+    }
+    &.center {
+        text-align: center;
+    }
+    &.bold {
+        font-weight: 700;
+    }
+    &.semibold {
+        font-weight: 600;
+    }
+    &.regular {
+        font-weight: 400;
+    }
+}
+
+p {
+    &.size-l {
+        font-size: 18px;
+    }
+    &.size-m {
+        font-size: 16px;
+    }
+    &.size-s {
+        font-size: 14px;
+    }
+    &.size-xs {
+        font-size: 12px;
+    }
+    &.left {
+        text-align: left;
+    }
+    &.center {
+        text-align: center;
+    }
+    &.right {
+        text-align: right;
+    }
+    &.bold {
+        font-weight: 700;
+    }
+    &.semibold {
+        font-weight: 600;
+    }
+    &.regular {
+        font-weight: 400;
+    }
+    &.italic {
+        font-style: italic;
+    }
+    &.uppercase {
+        text-transform: uppercase;
+    }
+    &.dark-purple {
+        color: var(--ion-color-primary-dark);
+    }
+    &.purple {
+        color: var(--ion-color-primary-medium);
+    }
+    &.light-purple {
+        color: var(--ion-color-primary-light);
+    }
+    &.gray {
+        color: #696c6a;
+    }
+    &.white {
+        color: var(--ion-color-white);
+    }
+}
