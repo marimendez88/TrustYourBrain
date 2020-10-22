@@ -33,6 +33,11 @@
 GLOBAL STYLES HERE
 */
 
+ion-toolbar {
+    --background: var(--ion-color-primary-gradient);
+    --color: var(--ion-color-primary-contrast);
+}
+
 ion-title {
     position: absolute;
     top: 0;
@@ -44,9 +49,8 @@ ion-title {
 }
 
 ion-toast {
-    --background: var(--ion-color-primary-medium);
-    --color: var(--ion-color-white);
+    --background: var(--ion-color-medium-shade);
+    --color: var(--ion-color-medium-contrast);
     --border-radius: 10px;
-    --button-color: var(--ion-color-white);
     font-weight: bold;
 }
