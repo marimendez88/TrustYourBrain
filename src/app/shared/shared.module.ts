@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
+
 @NgModule({
   imports: [IonicModule, CommonModule, FormsModule, ReactiveFormsModule],
   exports: [
@@ -15,9 +16,6 @@ import { IonicModule } from '@ionic/angular';
 
   ],
   providers: [],
-  entryComponents: [
-    HeaderComponent
-  ],
   declarations: [
     HeaderComponent,
   ],

@@ -1,0 +1,29 @@
+:host {
+    .menu-options {
+        height: auto;
+        background: var( --ion-color-secondary-background-gradient);
+    }
+    .inner-options {
+        margin: 20px 10px;
+        border-color: var(--ion-color-pacific-blue-shade);
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 8px;
+        .game-buttons {
+            display: flex;
+            justify-content: center;
+            ion-button {
+                margin: 5% 1px;
+                text-transform: initial;
+                width: 100%;
+                height: 70px;
+                --border-radius: 8px;
+                --background: var(--ion-color-pacific-blue-gradient);
+                --color: var(--ion-color-primary-contrast);
+                font-family: 'Play me games';
+                text-transform: uppercase;
+                font-size: 28px;
+            }
+        }
+    }
+}
