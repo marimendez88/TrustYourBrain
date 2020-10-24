@@ -10,6 +10,33 @@ import { URLHelpers } from '../../../models/helpers.model';
 })
 export class MenuComponent implements OnInit {
 
+
+  menuOptions = [
+    { 
+      name: 'quick start',
+      route: URLHelpers.MAIN 
+    },
+    { 
+      name: 'random game',
+      route: URLHelpers.HOME 
+    },
+    { 
+      name: 'leader board',
+      route: URLHelpers.HOME 
+    },
+
+    { 
+      name: 'about ',
+      route: URLHelpers.HOME 
+    },
+    { 
+      name: 'Exit',
+      route: URLHelpers.EXIT 
+    },
+
+  ];
+
+
   constructor(  private router: Router) { }
 
   
@@ -17,20 +44,8 @@ export class MenuComponent implements OnInit {
 
   }
 
-  routerMenu(key: string) {
-    switch(key){
-      case URLHelpers.HOME:
-        this.router.navigate([URLHelpers.HOME]);
-        break;
-      case URLHelpers.EXIT:
-        this.router.navigate([URLHelpers.EXIT]);
-        break;
-      case URLHelpers.MAIN:
-          this.router.navigate([URLHelpers.MAIN]);
-          break;
-        
-    }
-
+  routerMenu(route: string) {
+        this.router.navigate([route]);
   }
 
 }
