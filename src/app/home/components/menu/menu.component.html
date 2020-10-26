@@ -1,0 +1,16 @@
+<ion-card class="menu-options">
+    <app-header></app-header>
+    <ion-card-content>
+        <div class="inner-options">
+            <ion-grid>
+                <ion-buttons class="game-buttons">
+                    <ion-row>
+                        <ion-col size='12'>
+                            <ion-button expand="block" *ngFor="let option of menuOptions" (click)="routerMenu(option.route)">{{option.name}}</ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-buttons>
+            </ion-grid>
+        </div>
+    </ion-card-content>
+</ion-card>

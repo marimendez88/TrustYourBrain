@@ -1,0 +1,52 @@
+<section>
+    <ion-toolbar class="modal-header">
+        <ion-title>Randomly Generated Quiz</ion-title>
+    </ion-toolbar>
+</section>
+<section class="content" mode="ios">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-item mode="ios">
+                    <ion-label mode="ios">Categories </ion-label>
+                    <ion-select placeholder="Select One" mode="ios" interface="popover" [(ngModel)]="game.selectedCategory">
+                        <ion-select-option *ngFor="let category of categories" value={{category.id}}>
+                            {{category.name}}
+                        </ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item mode="ios">
+                    <ion-label mode="ios">Difficulty</ion-label>
+                    <ion-select placeholder="Select One" mode="ios" interface="popover" [(ngModel)]="game.selectedDifficulty">
+                        <ion-select-option *ngFor="let difficulty of difficulties" value={{difficulty.name}}>{{difficulty.name}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item mode="ios">
+                    <ion-label mode="ios">Types</ion-label>
+                    <ion-select placeholder="Select One" mode="ios" interface="popover" [(ngModel)]="game.selectedType">
+                        <ion-select-option *ngFor="let type of types" value={{type.type}}>{{type.name}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item mode="ios">
+                    <ion-label mode="ios">Question Quantity</ion-label>
+                    <ion-select placeholder="Select One" mode="ios" interface="popover" [(ngModel)]="game.quantity">
+                        <ion-select-option *ngFor="let quantity of quantities" value={{quantity.number}}>{{quantity.number}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-button (click)="print()">print</ion-button>
+    </ion-grid>
+</section>
