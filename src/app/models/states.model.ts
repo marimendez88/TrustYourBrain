@@ -8,6 +8,7 @@ import {
   } from './types.model'
 
 export type RootState = {
+  // TO DO ngRx structure
   // user: UsersState,
   // game: GameState,
   // previousGames: GameState[],
@@ -27,7 +28,8 @@ export type UsersState = {
 export type GameConfigState = {
   categories: CategoryModel [],
   difficulties: DifficultyModel[],
-  types: TypeModel[]
+  types: TypeModel[],
+  error: boolean
 }
 
 

@@ -3,14 +3,19 @@ import { createAction, props } from '@ngrx/store';
 
 
 export const loadCategories = createAction(
-	'[Categories] loadCategories',
-	props<{ categories: CategoryModel[] }>(),
+	'[Categories] loadCategories'
 );
 
-// export const loadCategoriesSuccess = createAction(
-// 	'[Categories] loadCategories',
-// 	props<{ categories: CategoryModel[] }>(),
-// );
+
+export const loadCategoriesSuccess = createAction(
+	'[Categories] loadCategoriesSuccess',
+	props<{ category: CategoryModel }>(),
+);
+
+export const loadCategoriesError = createAction(
+	'[Categories] loadCategoriesError',
+	props<{ payload: any }>(),
+);
 
 export const loadDifficulties = createAction(
   '[Difficulties] loadDifficulties',

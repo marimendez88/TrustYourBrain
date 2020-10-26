@@ -1,14 +1,15 @@
 
 
 import { createReducer, on } from '@ngrx/store';
-import { loadCategories, loadDifficulties, loadQuestions} from '../actions';
+import { loadCategories, loadDifficulties, loadQuestions, loadCategoriesError, loadCategoriesSuccess} from '../actions';
 import { GameConfigState } from './../../models/states.model';
 
 
 export const GameConfigInitialState: GameConfigState = {
 	categories: [],
 	difficulties: [],
-	types: []
+	types: [],
+	error: null, 
 };
 
 
@@ -17,6 +18,17 @@ const _gameConfigReducer = createReducer(
 	
 	on(loadCategories, (state) => ({
 		...state,
+	})),
+
+	on(loadCategoriesSuccess, (state, { category }) => ({
+		...state,
+		categories: [...state.categories, category],
+		error: false
+	})),
+
+	on(loadCategoriesError, (state, { payload }) => ({
+		...state,
+		error: true
 	})),
 
 	on(loadDifficulties, (state) => ({
