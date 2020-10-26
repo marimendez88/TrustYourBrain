@@ -1,12 +1,11 @@
-import { GameConfigService } from './../../../store/services/gameConfig.service';
-import { RootState } from './../../../models/states.model';
 
-
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component} from '@angular/core';
 import { Store } from '@ngrx/store';
+import { StoreService } from './../../../store/services/store.service';
+import { RootState } from './../../../models/states.model';
 import { CategoryModel, DifficultyModel, TypeModel } from './../../../models/types.model';
-import { loadCategories } from './../../../store/actions/gameConfig.actions';
-import { Observable } from 'rxjs';
+
+
 
 @Component({
   selector: 'app-home-root',
@@ -16,33 +15,29 @@ import { Observable } from 'rxjs';
 export class HomeRootPage {
 
   categories: CategoryModel[] = [];
-  difficulty: DifficultyModel[] = [];
+  difficulties: DifficultyModel[] = [];
   types: TypeModel[] = [];
 
 
-  constructor(private store: Store<RootState>) {}
+  constructor(private store: Store<RootState>, 
+    private storeService: StoreService) {}
 
   ngOnInit(): void {
 
-    this.loadConfigData();
+    this.storeService.startConfigLoading();
 
     this.openSubscriptions();
       
       console.log(this.categories)
       console.log(this.types)
-      console.log(this.difficulty)
+      console.log(this.difficulties)
 
 
   }
-  
-  private loadConfigData() {
-    this.store.dispatch(loadCategories());
-    // TODO:   this.store.dispatch(loadTypes()); 
-    // TODO:  this.store.dispatch(loadDifficulties());
-  }
+
   private openSubscriptions() {
     this.store.select('gameConfig').subscribe(gameState => {
-      this.difficulty = gameState.difficulties
+      this.difficulties = gameState.difficulties
       this.types = gameState.types
       this.categories = gameState.categories
     })
