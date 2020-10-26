@@ -1,7 +1,16 @@
 
 
 import { createReducer, on } from '@ngrx/store';
-import { loadCategories, loadDifficulties, loadQuestions, loadCategoriesError, loadCategoriesSuccess} from '../actions';
+import { 
+	loadCategories, 
+	loadDifficulties, 
+	loadDifficultiesSuccess, 
+	loadTypes,
+	loadTypesSuccess,
+	loadQuestions, 
+	loadCategoriesError, 
+	loadCategoriesSuccess
+} from '../actions';
 import { GameConfigState } from './../../models/states.model';
 
 
@@ -33,6 +42,22 @@ const _gameConfigReducer = createReducer(
 
 	on(loadDifficulties, (state) => ({
 		...state,
+	})),
+
+	on(loadDifficultiesSuccess, (state, { difficulty }) => ({
+		...state,
+		difficulties: [...state.difficulties, difficulty],
+		error: false
+	})),
+	
+	on(loadTypes, (state) => ({
+		...state,
+	})),
+
+	on(loadTypesSuccess, (state, { singleType }) => ({
+		...state,
+		types: [...state.types, singleType],
+		error: false
 	})),
 
 	on(loadQuestions, (state) => ({

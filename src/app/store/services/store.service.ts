@@ -1,6 +1,10 @@
 import { RootState } from './../../models/states.model';
 import { Store } from '@ngrx/store';
-import { loadCategories } from '../actions/gameConfig.actions';
+import {
+  loadCategories,
+        loadDifficulties,
+        loadTypes
+ } from '../actions/gameConfig.actions';
 
 
 
@@ -18,8 +22,8 @@ export class StoreService {
 
   startConfigLoading () {
     this.store.dispatch(loadCategories());
-    // TODO:   this.store.dispatch(loadTypes()); 
-    // TODO:  this.store.dispatch(loadDifficulties());
+    this.store.dispatch(loadDifficulties());
+    this.store.dispatch(loadTypes()); 
   }
 
 }

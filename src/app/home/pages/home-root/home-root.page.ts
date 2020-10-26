@@ -14,33 +14,10 @@ import { CategoryModel, DifficultyModel, TypeModel } from './../../../models/typ
 })
 export class HomeRootPage {
 
-  categories: CategoryModel[] = [];
-  difficulties: DifficultyModel[] = [];
-  types: TypeModel[] = [];
-
-
   constructor(private store: Store<RootState>, 
     private storeService: StoreService) {}
 
   ngOnInit(): void {
-
-    this.storeService.startConfigLoading();
-
-    this.openSubscriptions();
-      
-      console.log(this.categories)
-      console.log(this.types)
-      console.log(this.difficulties)
-
-
+    this.storeService.startConfigLoading();  
   }
-
-  private openSubscriptions() {
-    this.store.select('gameConfig').subscribe(gameState => {
-      this.difficulties = gameState.difficulties
-      this.types = gameState.types
-      this.categories = gameState.categories
-    })
-  }
-
 }

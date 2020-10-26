@@ -1,5 +1,37 @@
-import { CategoryModel } from './../../models/types.model';
-import {QuestionCategoryHelper , QuestionCategoryIDHelper} from '../../models/helpers.model'
+import { CategoryModel, DifficultyModel, TypeModel } from '../../models/types.model';
+import {
+  QuestionCategoryHelper , 
+  QuestionCategoryIDHelper,
+  QuestionDifficultyHelper,
+  QuestionTypeIDHelper,
+  QuestionTypeNameHelper
+} from '../../models/helpers.model'
+
+export const difficultiesConfig : DifficultyModel[] = [
+  {
+    name: QuestionDifficultyHelper.EASY
+  },
+  {
+    name: QuestionDifficultyHelper.MEDIUM
+  },
+  {
+    name: QuestionDifficultyHelper.HARD
+  }
+];
+
+export const typesConfig : TypeModel[] = [
+  {
+    type: QuestionTypeIDHelper.MULTIPLE,
+    name: QuestionTypeNameHelper.MULTIPLE
+  },
+  {
+    type: QuestionTypeIDHelper.TRUE_FALSE,
+    name: QuestionTypeNameHelper.TRUE_FALSE
+  }
+];
+
+
+
 
 export const categoriesOptionsConfig: CategoryModel[] = [
   {

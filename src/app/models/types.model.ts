@@ -1,8 +1,10 @@
 import { 
   QuestionCategoryHelper, 
   QuestionCategoryIDHelper,
-  QuestionType, 
-  QuestionDifficulty } 
+  QuestionDifficultyHelper,
+  QuestionTypeIDHelper, 
+  QuestionTypeNameHelper
+ } 
   from './helpers.model';
 
 
@@ -36,10 +38,11 @@ export type CategoryModel = {
   id: QuestionCategoryIDHelper,
 }
 export type DifficultyModel = {
-  difficulty: QuestionDifficulty
+  name: QuestionDifficultyHelper
 }
 export type TypeModel = {
-  type: QuestionType
+  type: QuestionTypeIDHelper
+  name: QuestionTypeNameHelper
 }
 
 export type LeaderBoardModel = {

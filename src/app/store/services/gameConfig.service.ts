@@ -3,7 +3,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { QuestionModel } from './../../models/types.model';
-import { categoriesOptionsConfig } from './../../shared/consts/categories.const';
+import { categoriesOptionsConfig,
+  difficultiesConfig,
+  typesConfig
+} from '../../shared/consts/questions.const';
 
 
 @Injectable({
@@ -17,6 +20,12 @@ export class GameConfigService {
 
   loadCategories () {
     return categoriesOptionsConfig
+  }
+  loadDifficulties () {
+    return difficultiesConfig
+  }
+  loadTypes () {
+    return typesConfig
   }
 
 }

@@ -67,16 +67,20 @@ export enum QuestionCategoryHelper {
   CARTOON_ANIMATIONS = 'Cartoon & Animations'
 }
 
-export enum QuestionDifficulty {
+export enum QuestionDifficultyHelper {
   EASY = 'easy',
   MEDIUM = 'medium',
   HARD = 'hard'
 }
 
 
-export enum QuestionType {
+export enum QuestionTypeIDHelper {
   MULTIPLE = 'multiple',
   TRUE_FALSE = 'boolean'
+}
+export enum QuestionTypeNameHelper {
+  MULTIPLE = 'Multiple Choice',
+  TRUE_FALSE = 'True or False'
 }
 
 
