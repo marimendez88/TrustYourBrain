@@ -15,26 +15,32 @@ export type UserModel = {
 }
 
 export type QuestionsModel = {
-  firebaseId: string,
-  username: string,
-  email: string,
-  name?: string,
-  lastName?: string,
+  questions: QuestionModel[]
 }
 
 export type QuestionModel = {
   category: CategoryModel,
-  type: QuestionType,
-  difficulty: QuestionDifficulty
+  type: TypeModel,
+  difficulty: DifficultyModel
   question: string,
   correct_answer: string,
-  options: string[]
+  options: questionOptionsModel[]
+}
+
+export type questionOptionsModel = {
+  option: string,
+  correct: boolean  
 }
 export type CategoryModel = {
   name: QuestionCategoryHelper,
   id: QuestionCategoryIDHelper,
 }
-
+export type DifficultyModel = {
+  difficulty: QuestionDifficulty
+}
+export type TypeModel = {
+  type: QuestionType
+}
 
 export type LeaderBoardModel = {
   firebaseId: string,

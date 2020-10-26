@@ -1,26 +1,34 @@
-import { QuestionCategoryHelper, QuestionDifficulty, QuestionType } from './helpers.model';
-import { QuestionModel , CategoryModel, UserModel} from './types.model'
+
+import { 
+   QuestionModel,
+   CategoryModel, 
+   UserModel, 
+   DifficultyModel,
+   TypeModel
+  } from './types.model'
 
 export type RootState = {
-  user: [],
-  game: [],
-  previousGames: [],
-  generalInformation: []
+  // user: UsersState,
+  // game: GameState,
+  // previousGames: GameState[],
+  gameConfig: GameConfigState
 } 
-
+export type GameState = {
+  selectedCategories: CategoryModel[],
+  questionsPool: QuestionModel[],
+  selectedDifficulty: DifficultyModel,
+  selectedType: TypeModel
+}
 export type UsersState = {
   user: UserModel,
   level: number,
   points: number,
 }
-export type GameState = {
-  selectedCategories: CategoryModel[],
-  questionsPool: QuestionModel[],
-  selectedDifficulty: QuestionType,
+export type GameConfigState = {
+  categories: CategoryModel [],
+  difficulties: DifficultyModel[],
+  types: TypeModel[]
 }
 
-export type QuestionsState = {
-  user: UserModel,
-  level: number,
-  points: number,
-}
+
+

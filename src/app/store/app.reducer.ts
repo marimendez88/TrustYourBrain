@@ -1,8 +1,10 @@
 import { ActionReducerMap } from '@ngrx/store';
-import {RootState} from '../models/states.model'
+import * as reducers from './reducers';
+import { RootState } from '../models/states.model'
 
-// : ActionReducerMap<RootState>
-
-export const appReducers = {
-  
+export const appReducers: ActionReducerMap<RootState> = {
+  // user: UsersState,
+  // game: GameState,
+  // previousGames: GameState[],
+  gameConfig: reducers.gameConfigReducer
 };

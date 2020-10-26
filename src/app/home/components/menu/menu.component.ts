@@ -1,7 +1,10 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
 import { URLHelpers } from '../../../models/helpers.model';
+import { QuickStartModalComponent } from '../quickStartModalComponent/quick-start-modal.component';
+
 
 @Component({
   selector: 'app-menu',
@@ -37,7 +40,9 @@ export class MenuComponent implements OnInit {
   ];
 
 
-  constructor(  private router: Router) { }
+  constructor(  
+    private router: Router,
+    public modalController: ModalController ) { }
 
   
   ngOnInit() {
@@ -45,7 +50,33 @@ export class MenuComponent implements OnInit {
   }
 
   routerMenu(route: string) {
-        this.router.navigate([route]);
+   console.log('clicking')
+    if(route === URLHelpers.MAIN){
+    this.openQuickStartModal();
+    }
+    else{
+      this.router.navigate([route]);
+    }
+        
   }
 
+  async openQuickStartModal (){
+    const modal = await this.modalController.create({
+      component: QuickStartModalComponent,
+      cssClass: ['tyb-modal', 'auto-height'] ,
+      componentProps: {
+
+      }
+    });
+    modal.present();
+    modal.onDidDismiss().then((response) => {
+      console.log(response)
+      if (response.role === 'backdrop') {
+        return;
+    }
+      // this.router.navigate([URLHelpers.MAIN]);
+    });
+  }
 }
+
+

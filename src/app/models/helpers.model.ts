@@ -14,7 +14,7 @@ export enum MenuHelpers {
 }
 
 export enum QuestionCategoryIDHelper {
-  ID_ID_GENERAL_KNOWLEDGE = '9',
+  ID_GENERAL_KNOWLEDGE = '9',
   ID_BOOKS = '10',
   ID_FILM = '11',
   ID_MUSIC= '12',

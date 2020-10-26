@@ -48,6 +48,9 @@ ion-toolbar {
     height: 15%;
     --background: var(--ion-color-primary-gradient);
     --color: var(--ion-color-primary-contrast);
+    &.modal-header {
+        --background: var(--ion-color-pacific-blue-gradient);
+    }
 }
 
 ion-title {
@@ -61,4 +64,29 @@ ion-toast {
     --color: var(--ion-color-medium-contrast);
     --border-radius: 10px;
     font-weight: bold;
+}
+
+ion-modal.tyb-modal {
+    &.auto-height {
+        --height: auto;
+        .modal-wrapper {
+            -webkit-box-shadow: -1px 4px 19px 0px rgba(0, 0, 0, 1);
+            -moz-box-shadow: -1px 4px 19px 0px rgba(0, 0, 0, 1);
+            box-shadow: -1px 4px 19px 0px rgba(0, 0, 0, 1);
+            width: 90vw;
+            .ion-page {
+                position: relative;
+                contain: content;
+                max-height: 90vh;
+                .modal-content {
+                    overflow: auto;
+                }
+            }
+        }
+    }
+    &.rounded-borders {
+        .modal-wrapper {
+            border-radius: 10px;
+        }
+    }
 }
