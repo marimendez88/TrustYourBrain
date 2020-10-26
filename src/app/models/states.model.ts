@@ -15,7 +15,7 @@ export type RootState = {
   gameConfig: GameConfigState
 } 
 export type GameState = {
-  selectedCategories: CategoryModel[],
+  selectedCategory: CategoryModel,
   questionsPool: QuestionModel[],
   selectedDifficulty: DifficultyModel,
   selectedType: TypeModel

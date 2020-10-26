@@ -139,6 +139,10 @@ h5 {
 }
 
 p {
+    &.normal-text {
+        font-family: 'Hacked';
+        text-transform: capitalize;
+    }
     &.size-l {
         font-size: 18px;
     }
@@ -184,10 +188,13 @@ p {
     &.light-purple {
         color: var(--ion-color-primary-light);
     }
-    &.gray {
-        color: #696c6a;
+    &.green {
+        color: var(--ion-color-success);
     }
     &.white {
         color: var(--ion-color-white);
+    }
+    &.pink {
+        color: var(--ion-color-secondary);
     }
 }
