@@ -42,7 +42,7 @@
                 <ion-item mode="ios">
                     <ion-label mode="ios">Question Quantity</ion-label>
                     <ion-select placeholder="Select One" mode="ios" interface="popover" [(ngModel)]="game.quantity">
-                        <ion-select-option *ngFor="let quantity of quantities" value={{quantity.number}}>{{quantity.number}}</ion-select-option>
+                        <ion-select-option *ngFor="let quantity of quantities" value={{quantity.quantity}}>{{quantity.quantity}}</ion-select-option>
                     </ion-select>
                 </ion-item>
             </ion-col>

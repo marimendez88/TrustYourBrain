@@ -5,11 +5,11 @@ export enum URLHelpers {
   MAIN = 'main',
 }
 
-export enum MenuHelpers {
-  START = 'start',
+export enum MenuOptionsHelpers {
+  QUICK_START = 'Quick start',
+  RANDOM_GAME = 'Random Game',
   LEADER_BOARD = 'leader board',
-  OPTIONS = 'options',
-  DEVELOPER= 'developer',
+  MORE= 'More',
   EXIT = 'Exit',
 }
 

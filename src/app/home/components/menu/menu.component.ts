@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
-import { URLHelpers } from '../../../models/helpers.model';
+import { URLHelpers, MenuOptionsHelpers } from '../../../models/helpers.model';
 import { QuickStartModalComponent } from '../quickStartModalComponent/quick-start-modal.component';
 
 
@@ -16,24 +16,23 @@ export class MenuComponent implements OnInit {
 
   menuOptions = [
     { 
-      name: 'quick start',
+      name: MenuOptionsHelpers.QUICK_START,
       route: URLHelpers.MAIN 
     },
     { 
-      name: 'random game',
+      name: MenuOptionsHelpers.RANDOM_GAME,
       route: URLHelpers.HOME 
     },
     { 
-      name: 'leader board',
-      route: URLHelpers.HOME 
-    },
-
-    { 
-      name: 'about ',
+      name: MenuOptionsHelpers.LEADER_BOARD,
       route: URLHelpers.HOME 
     },
     { 
-      name: 'Exit',
+      name: MenuOptionsHelpers.MORE, 
+      route: URLHelpers.HOME 
+    },
+    { 
+      name: MenuOptionsHelpers.EXIT,
       route: URLHelpers.EXIT 
     },
 

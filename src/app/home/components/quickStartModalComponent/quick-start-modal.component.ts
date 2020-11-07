@@ -31,16 +31,16 @@ export class QuickStartModalComponent implements OnInit {
 
   quantities = [
     {
-      number: '5'
+      quantity: '5'
     },
     {
-      number: '10'
+      quantity: '10'
     },
     {
-      number: '20'
+      quantity: '20'
     },
     {
-      number: '30'
+      quantity: '30'
     },
   ]
 
